@@ -1,0 +1,53 @@
+body{
+    background-color: lightblue;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+ul{
+    width: 80%;
+    margin: 0 auto;
+}
+li{
+    list-style-type: none;
+    padding: 10px;
+    border: 2px solid gray;
+}
+
+li:nth-child(even){
+    background-color: blueviolet;
+}
+
+li:nth-child(odd){
+    background-color: crimson;
+}
+
+table{
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid black;
+}
+
+thead{
+    background-color: darkmagenta;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(2n+2){
+    background-color: lightgray;
+}
+
+tbody tr:hover{
+    background-color: darkmagenta;
+    color: white;
+}
