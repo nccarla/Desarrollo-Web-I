@@ -1,0 +1,323 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.envoltorio{
+	overflow: hidden;
+	width: 80%;
+	margin:0 auto;
+}
+
+section article.ofertas{
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    min-height: calc(100vh - 120px); 
+}
+
+html body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+header{
+	background-color: #323A45;
+	padding: 10px 0;
+	color: #fff;
+	width:100%;
+	border-bottom: 5px solid#0056a5;
+}
+
+header section{
+	flex: 1;
+}
+
+.logo img{
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-bottom: -20%;
+	float: left;
+	flex-wrap: wrap;
+}
+
+header nav{
+	float: right;
+	height: auto;
+	width: 100%;
+}
+
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	float: right;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+nav ul li{
+	line-height: 400%;
+}
+
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 0% 1em;
+	display: block;
+	height: 100%;
+	text-transform: uppercase;
+}
+
+nav ul li:hover{
+	background-color: #0056a5;
+	
+}
+
+nav ul li ul{
+	display: none;
+	position: absolute;
+	background-color: #323A45;
+	padding: block;
+}
+
+nav ul li:hover ul{
+	display: block;
+}
+
+nav ul li ul li{
+	background-color: #222;
+	white-space: nowrap;
+}
+
+.activo a{
+	background-color: #0056a5;
+}
+.contenedor-slider{
+	width: 100%;
+	overflow: hidden;
+}
+
+.contenedor-slider img{
+	width: 100%;
+	height: auto;
+	display: block;
+	border-bottom: 5px solid #fff;
+}
+
+article{
+	margin-bottom: 30px;
+}
+
+.intro{
+	background-color: #12488C;
+	color: #fff;
+	padding: 40px 0;
+}
+
+.intro .envoltorio{
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	color: #fff;
+}
+.intro h1 a{
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.intro p{
+	font-size: 18px;
+	line-height: 1.6;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.boton{
+	background-color: #00315E;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.boton a{
+	color: #fff;
+	background-color: #00315E;
+	padding: 12px 24px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.intro .boton{
+	margin-top: 15px;
+}
+
+.servicios{
+	background-color: #fff;
+	padding: 40px 0;
+}
+
+.servicios .envoltorio{
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.servicios .grid{
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #fff;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+}
+
+.servicios .grid:last-child{
+	margin-right: 0;
+}
+
+.servicios img{
+	width: 100%;
+	border-radius: 5px 5px 0 0;
+}
+
+.servicios h3{
+	color: #1248AA;
+	margin: 10px 15px;
+	text-align: center;
+}
+
+.servicios p{
+	margin: 10px 15px;
+	color: #333;
+	justify-content: justify;
+}
+
+.botoncito{
+	background-color: #12488C;
+	color: #fff;
+	padding: 10px;
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.testimonios{
+	padding: 40px 0;
+	background-color: #EDEAE6;
+}
+
+.testimonios-grid{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.testimonios h3{
+	margin-bottom: 20px;
+	color: #323A69;
+	text-align: center;
+}
+
+.testimonios{
+	margin: 10px 0;
+	color: #8A8A8A;
+	text-align: left;
+}
+
+.testimonios b{
+	color: #8A8A8A;
+	text-align: left;
+}
+
+footer{
+	background-color: #323A45;
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 14px;
+	text-transform: uppercase;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	margin-top: auto;
+}
+
+table{
+	border-collapse: collapse;
+	width: 60%;
+	height: fit-content;
+	align-items: center;
+	margin: 0 auto;
+}
+
+th{
+	color: #fff;
+	background-color: black;
+}
+
+tbody tr:nth-child(odd){
+	background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even){
+	background-color: #fff;
+}
+
+form{
+	width: 100%;
+	margin: 20px 0;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	max-width: 600px;
+}
+
+form label{
+	display: block;
+	color: #333;
+	margin-bottom: 5px;
+}
+
+form imput, select{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+form button{
+	background-color: #8A8A8A;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: 20px;
+	border-radius: 5px;
+	padding: 10px 20px;
+}
+
+form button:hover{
+	background-color: #0056a5;
+}
+
