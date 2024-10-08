@@ -1,0 +1,145 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3{
+    color: #333;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+ul li{
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 5px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul li a:hover{
+    color: palevioletred;
+}
+
+.head{
+    background: palevioletred;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.head h1{
+    font-size: 2.5rem;
+}
+
+.foda, .feedback, .aprendizaje{
+    margin-top: 30px;
+}
+
+.foda div, .feedback div{
+    margin: 20px 0;
+}
+
+footer{
+    text-align: center;
+    background-color: palevioletred;
+    color: #333;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 1024px){
+    .container{
+        width: 90%;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2,h3{
+        font-size: 1.5rem;
+    }
+    ul,li{
+        font-size: 0.9rem;
+    }
+    .head h1{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .container{
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    h2{
+        font-size: 1.3rem;
+    }
+
+    h3{
+        font-size: 1rem;
+    }
+
+    ul li{
+        font-size: .8rem;
+        padding: 8px;
+    }
+
+    .foda .row, .feedback .row{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .head h1{
+        font-size: 1.5rem;
+    }
+
+    .head p{
+        font-size: 1rem;
+    }
+
+    footer{
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 480px){
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1.1rem;
+    }
+    h3{
+        font-size: .9rem;
+    }
+    ul li{
+        font-size: .7rem;
+        padding: 5px;
+    }
+    footer{
+        font-size: .6rem;
+    }
+}
+
