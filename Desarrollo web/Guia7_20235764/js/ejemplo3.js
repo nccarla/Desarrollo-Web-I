@@ -45,7 +45,7 @@ const aumentarLetra = function () {
         parrafos[index].style.fontSize = `${contadorAumentar}em`;
     }
     const titulos = document.querySelectorAll("h1");
-    for (let index = 0; index < parrafos.length; index++) {
+    for (let index = 0; index < titulos.length; index++) {
         titulos[index].style.fontSize = `${contadorAumentar}em`;
     }
 };
@@ -73,7 +73,7 @@ const startDOM = () => {
 
     const buttonTitulos = document.getElementById("idTitulos");
     buttonTitulos.value = "#000000";
-    buttonTitulos.addEventListener("input", primerColorParrafos, false);
+    buttonTitulos.addEventListener("input", primerColorTitulos, false);
     buttonTitulos.addEventListener("change", cambiarColorTitulos, false);
     buttonTitulos.select();
 
