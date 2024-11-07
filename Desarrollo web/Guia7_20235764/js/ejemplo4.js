@@ -43,7 +43,7 @@ buttonMenu.onclick = function () {
 buttonTitulo.onclick = function () {
     const contenedor = document.querySelector("#idDivPage");
 
-    const menu = document.querySelectorAll("idDivPage > header");
+    const menu = document.querySelectorAll("#idDivPage > header");
 
     if (contenedor) {
         if (menu.length > 0) {
