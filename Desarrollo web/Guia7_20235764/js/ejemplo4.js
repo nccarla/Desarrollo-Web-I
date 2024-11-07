@@ -1,4 +1,4 @@
-const AgregarPagina = document.querySelector("#idAgregarPagina");
+const buttonAgregarPagina = document.querySelector("#idAgregarPagina");
 const buttonMenu = document.querySelector("#idAgregarMenu");
 const buttonTitulo = document.querySelector("#idAgregarTitulo");
 const buttonParrafo = document.querySelector("#idAgregarParrafo");
@@ -27,10 +27,10 @@ buttonMenu.onclick = function () {
     const contenedor = document.querySelector("#idDivPage");
 
     if(contenedor) {
-        const menuVerfificar = document.querySelectorAll("#idDivPage > header");
+        const menuVerificar = document.querySelectorAll("#idDivPage > header");
 
-        if (menuVerfificar.length == 0) {
-            const menuVerfificar = document.querySelector("header").cloneNode(true);
+        if (menuVerificar.length == 0) {
+            const menu = document.querySelector("header").cloneNode(true);
             contenedor.appendChild(menu);
         } else {
             alert("Ya ha sido agregado el menu");
