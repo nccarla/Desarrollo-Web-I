@@ -10,6 +10,15 @@ const nombreElemento = document.getElementById("idNombreElemento");
 
 const modal = new bootstrap.Modal(document.getElementById("idModal"), {});
 
+const verificarId = function(id) {
+    if (document.getElementById(id) == null) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+
 const verificarTipoElemento = function () {
     let elemento = cmbElemento.value;
 
@@ -130,8 +139,50 @@ buttonAddElemento.onclick = () => {
     }
 };
 
-document.getElementById("idModal").addEventListener("shown.bs.modal", () => {
+const validarForm = () => {
+    const elementos = newForm.elements;
+    for (const elemento of elementos) {
+        if (!validarElemento(elemento)) {
+            return false;
+        }
+    }
+    alert ("Campos validos");
+    return true;
+};
+
+const validarElemento = (elemento) => {
+    const { type, nodeName, value, checked, selectedIndex, id} = elemento;
+
+    if ((type == "text" || type == "color") && !value) {
+        alert(`${id} esta vacio`)
+        return false;
+    }
+    if ((type == "radio" || type == "checkbox") && !checked) {
+        alert(`Seleccione una opcion de ${id}`);
+        return false;
+    }
+    if (nodeName == "SELECT" && !checked) {
+        alert(`Seleccione una opcion de ${id}`);
+        return false;
+    }
+    if (nodeName == "SELECT" && selectedIndex == 0) {
+        alert(`Seleccione un opcion de ${id}`);
+        return false;
+    }
+    return true;
+};
+
+const buttonValidar = document.createElement("button");
+buttonValidar.textContent = "Validar";
+buttonValidar.onclick = validarForm;
+buttonValidar.classList.add("btn", "btn-success", "mt-3");
+newForm.parentNode.appendChild(buttonValidar);
+
+/*document.getElementById("idModal").addEventListener("shown.bs.modal", () => {
     tituloElemento.value = "";
     nombreElemento.value = "";
     tituloElemento.focus();
-});
+});*/
+
+buttonCrear.onclick = verificarTipoElemento;
+
