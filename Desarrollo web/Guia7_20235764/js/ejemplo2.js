@@ -1,7 +1,7 @@
 const formulario = document.forms["frmRegistro"];
 const button = document.forms["frmRegistro"].elements["btnRegistro"];
 
-const modal = new bootstrapp.Modal(document.getElementById("idModal"), {});
+const modal = new bootstrap.Modal(document.getElementById("idModal"), {});
 
 const bodyModal = document.getElementById("idBodyModal");
 
