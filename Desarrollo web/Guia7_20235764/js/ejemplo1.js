@@ -14,7 +14,6 @@ const verificarTipoElemento = function () {
     let elemento = cmbElemento.value;
 
     if (elemento != "") {
-
         modal.show();
     } else {
         alert("Debe seleccionar el elemento que se creara");
@@ -35,7 +34,6 @@ const newSelect = function () {
 
     let labelElemento = document.createElement("label");
     labelElemento.setAttribute("for", `id${nombreElemento.value}`);
-
     labelElemento.textContent = tituloElemento.value;
 
     let labelId = document.createElement("span");
@@ -54,7 +52,7 @@ const newSelect = function () {
 
 const newRadioCheckbox = function (newElemento) {
     let addElemento = document.createElement("input");
-    addElemento.setAttribute("id", `id ${nombreElemento.value}`);
+    addElemento.setAttribute("id", `id${nombreElemento.value}`);
     addElemento.setAttribute("type", newElemento);
     addElemento.setAttribute("class", "form-check-input");
 
@@ -77,7 +75,7 @@ const newRadioCheckbox = function (newElemento) {
     newForm.appendChild(divElemento);
 };
  
-const newImput = function (newElemento) {
+const newInput = function (newElemento) {
     let addElemento =
         newElemento == "textarea"
             ? document.createElement("textarea")
@@ -86,10 +84,13 @@ const newImput = function (newElemento) {
     addElemento.setAttribute("id", `id${nombreElemento.value}`);
     addElemento.setAttribute("type", newElemento);
     addElemento.setAttribute("class", "form-control");
-    addElemento.setAttribute("placholder", tituloElemento.value);
+    addElemento.setAttribute("placeholder", tituloElemento.value);
 
     let labelElemento = document.createElement("label");
-    labelElemento.setAttribute("class", "bi bi-tag");
+    labelElemento.setAttribute("for", `id${nombreElemento.value}`);
+
+    let iconLabel = document.createElement("i");
+    iconLabel.setAttribute("class", "bi bi-tag");
 
     labelElemento.textContent = tituloElemento.value;
 
@@ -122,7 +123,7 @@ buttonAddElemento.onclick = () => {
         } else if (elemento == "radio" || elemento == "checkbox") {
             newRadioCheckbox(elemento);
         } else {
-            newImput(elemento);
+            newInput(elemento);
         }
     } else {
         alert("Faltan campos por completar");
